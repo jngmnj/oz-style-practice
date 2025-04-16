@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { flexMixin, fontMixin } from "../style/styled";
+import { flexMixin, fontMixin, gray, tagColor } from "../style/styled";
 
 export default function Content({ content }) {
   const ContentContainer = styled.div`
@@ -12,8 +12,8 @@ export default function Content({ content }) {
     }
     span {
       ${fontMixin({ size: "12px" })};
-      color: $tag-color;
-      border: 1px solid $tag-color;
+      color: ${tagColor};
+      border: 1px solid ${tagColor};
       padding: 4px 5px;
       border-radius: 3px;
     }
@@ -22,7 +22,7 @@ export default function Content({ content }) {
     }
     p {
       ${fontMixin({ size: "12px" })};
-      color: $gray;
+      color: ${gray};
     }
   `;
   return (
